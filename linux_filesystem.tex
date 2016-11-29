@@ -87,18 +87,18 @@
 %   \end{frame}
 % }
 
-% Fußzeile mit Framenumber
-\setbeamertemplate{footline}{
-	\begin{beamercolorbox}[wd=0.5\textwidth,ht=3ex,dp=1.5ex,leftskip=.5em,rightskip=.5em]{author in head/foot}
-		\usebeamerfont{author in head/foot}
-		\insertframenumber/\inserttotalframenumber\hfill%\insertshortauthor
-	\end{beamercolorbox}
-	\vspace*{-4.5ex}\hspace*{0.5\textwidth}
-	\begin{beamercolorbox}[wd=0.5\textwidth,ht=3ex,dp=1.5ex,left,leftskip=.5em]{title in head/foot}
-		\usebeamerfont{title in head/foot}
-		\insertshorttitle
-	\end{beamercolorbox}
-}
+%% Fußzeile mit Framenumber
+%\setbeamertemplate{footline}{
+%	\begin{beamercolorbox}[wd=0.5\textwidth,ht=3ex,dp=1.5ex,leftskip=.5em,rightskip=.5em]{author in head/foot}
+%		\usebeamerfont{author in head/foot}
+%		\insertframenumber/\inserttotalframenumber\hfill%\insertshortauthor
+%	\end{beamercolorbox}
+%	\vspace*{-4.5ex}\hspace*{0.5\textwidth}
+%	\begin{beamercolorbox}[wd=0.5\textwidth,ht=3ex,dp=1.5ex,left,leftskip=.5em]{title in head/foot}
+%		\usebeamerfont{title in head/foot}
+%		\insertshorttitle
+%	\end{beamercolorbox}
+%}
 
 
 \usepackage[]{graphicx}
@@ -173,8 +173,42 @@
     \titlepage
 \end{frame}
 
-\include{inc/inc_intro.tex}
+\include{inc/inc_intro}
 
-%...
+\include{inc/inc_fhs}
+
+\include{inc/inc_root}
+
+\include{inc/inc_boot}
+
+\include{inc/inc_overview}
+
+\include{inc/inc_srvvar}
+
+\include{inc/inc_everythingfile}
+
+\include{inc/inc_procsys}
+
+\include{inc/inc_dev}
+
+\include{inc/inc_specialnet}
+
+\include{inc/inc_specialvirtual}
+
+\include{inc/inc_mediausb}
+
+%? %\include{inc/inc_overview2}
+
+\include{inc/inc_home}
+
+\include{inc/inc_binpath}
+
+\include{inc/inc_configs}
+
+\include{inc/inc_tmp}
+
+\include{inc/inc_opt}
+
+\include{inc/inc_permissions}
 
 \end{document}
