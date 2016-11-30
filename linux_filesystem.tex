@@ -27,7 +27,7 @@
 % \setbeamercolor{palette secondary}{use=structure,fg=structure.fg!100!green} % changed this
 % \setbeamercolor{palette tertiary}{use=structure,fg=structure.fg!100!green} % changed this
 
-\usetheme{Luebeck} % or split
+\usetheme{Berkeley} % or split
 \usecolortheme{grass}
 \setbeamercovered{transparent}
 
@@ -100,7 +100,6 @@
 %	\end{beamercolorbox}
 %}
 
-
 \usepackage[]{graphicx}
 \usepackage{listings}
 %\lstset{tabsize=2}
@@ -169,12 +168,32 @@
 
 \begin{document}
 
+% Titlepage - Hack um Sidebar ohne Inhalt anzuzeigen
+\setbeamertemplate{sidebar left}{}
 \begin{frame}
     \titlepage
 \end{frame}
 
 \include{inc/inc_intro}
 
+% Sidebarinhalt wieder mit TOC aber ohne author
+\setbeamertemplate{sidebar left}[sidebar theme]
+% Author im Sidebar verstecken
+\makeatletter
+  \setbeamertemplate{sidebar \beamer@sidebarside}%{sidebar theme}
+  {
+    \beamer@tempdim=\beamer@sidebarwidth%
+    \advance\beamer@tempdim by -6pt%
+    \insertverticalnavigation{\beamer@sidebarwidth}%
+    \vfill
+    \ifx\beamer@sidebarside\beamer@lefttext%
+    \else%
+      \usebeamercolor{normal text}%
+      \llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm}%
+      \vskip2pt%
+    \fi%
+}%
+\makeatother
 \include{inc/inc_fhs}
 
 \include{inc/inc_root}
