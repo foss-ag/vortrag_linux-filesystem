@@ -139,7 +139,6 @@
 \newcommand{\dahe}{d.\,h.\nolinebreak[4]\xspace}
 \newcommand{\uvm}{u.\,v.\,m.\xspace}
 \newcommand{\usw}{u.\,s.\,w.\xspace}
-\newcommand{\so}{s.\,o.\xspace}
 \newcommand{\sg}{s.\,g.\xspace}
 \newcommand{\iA}{i.\,A.\xspace}
 \newcommand{\sa}{s.\,a.\xspace}
@@ -149,6 +148,15 @@
 \newcommand{\oae}{o.\,\"a.\xspace}
 \newcommand{\oBdA}{o.\,B.\,d.\,A.\xspace}
 \newcommand{\OBdA}{O.\,B.\,d.\,A.\xspace}
+
+% footnote ohne marker blfootnote
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
 
 \author{
   Gajda, Michael \\
@@ -202,6 +210,8 @@
 
 \include{inc/inc_overview}
 
+\include{inc/inc_specialnet}
+
 \include{inc/inc_srvvar}
 
 \include{inc/inc_everythingfile}
@@ -209,8 +219,6 @@
 \include{inc/inc_procsys}
 
 \include{inc/inc_dev}
-
-\include{inc/inc_specialnet}
 
 \include{inc/inc_specialvirtual}
 
