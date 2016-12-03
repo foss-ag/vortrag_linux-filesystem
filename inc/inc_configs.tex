@@ -1,2 +1,22 @@
-\section{x}
-\subsection{x}
+\section[/etc, ~/.*]{/etc, ~/.*, ~/.config/*}
+\begin{frame}{Ein Konzept für Konfigurationen \tiny (Und es ist keine besch*** Datenbank!)}
+\begin{itemize}
+\item Unterschiede:
+	\begin{itemize}
+	\item Systemweit:
+		\begin{itemize}
+		\item Einstellungen (/etc)
+		\item Temporäre Datne (/tmp)
+		\item Programmdaten (/var)
+		\item 
+		\end{itemize}
+	\item Benutzerspezifisch:
+	\begin{itemize}
+		\item Einstellungen (~/.config/…)
+		\item Temporäre Dateien (~/.cache/…)
+		\item Programmdaten (~/.local/…)	
+	\end{itemize}
+	\end{itemize}
+\item In seltenen Fällen Ausnahmen
+\end{itemize}
+\end{frame}
