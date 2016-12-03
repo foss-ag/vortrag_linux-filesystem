@@ -1,2 +1,58 @@
-\section{x}
-\subsection{x}
+\section[Permissions]{Permissions}
+\begin{frame}{Wer darf was?}
+\texttt{\small -rw-r--r-- 1 draget draget 16  3. Dez 10:12 yay.txt}
+\begin{itemize}
+\item Rechte
+\item Benutzer
+\item Gruppe
+\item Größe
+\end{itemize}
+
+\vspace{1cm}
+Wie sind die Rechte zu lesen?
+\end{frame}
+
+\begin{frame}{chmod 777! \tiny(Bitte nicht machen)}
+\texttt{\huge
+\textcolor{red}{-}\textcolor{blue}{rw-}\textcolor{green}{r--}\textcolor{orange}{r--} …
+}
+
+\begin{minipage}{0.48\linewidth}
+\vspace{0.5cm}
+\begin{itemize}
+\item \textcolor{red}{Typ}
+\begin{itemize}
+\item[-] Reguläre Datei
+\item[c] Character-Gerät
+\item[b] Block-Gerät
+\item[d] Verzeichnis
+\end{itemize}
+\item \textcolor{blue}{Besitzer-Rechte}
+\begin{itemize}
+\item[r] Lesen
+\item[w] Schreiben
+\item[x] Ausführen / Nutzen
+\item[sSG] Speziell
+\end{itemize}
+\end{itemize}
+\end{minipage}%
+\begin{minipage}{0.48\linewidth}
+\vspace{0.5cm}
+\begin{itemize}
+\item \textcolor{green}{Grp.-Mitglieder-Rechte}
+	\begin{itemize}
+	\item[…] -analog-
+	\end{itemize}
+\item \textcolor{orange}{Jeder-Rechte}
+	\begin{itemize}
+	\item[…] -analog-
+	\end{itemize}
+\item \texttt{chmod xxx <Datei>}
+	\begin{itemize}
+	\item Binär zählen! rw- $\rightarrow$ 110 = 6
+	\end{itemize}
+\item \texttt{chmod u=rw,g-x,o=r <Datei>}
+\end{itemize}
+\end{minipage}
+
+\end{frame}
