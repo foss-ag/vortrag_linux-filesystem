@@ -27,9 +27,9 @@
 % \setbeamercolor{palette secondary}{use=structure,fg=structure.fg!100!green} % changed this
 % \setbeamercolor{palette tertiary}{use=structure,fg=structure.fg!100!green} % changed this
 
-\usetheme{Berkeley} % or split
-\usecolortheme{grass}
-\setbeamercovered{transparent}
+
+%Einbinden des Themes
+\input{Latex_Template/beamerthemeFOSSAG.sty}
 
 % Bild beim Footer
 %\pgfdeclareimage[height=0.4cm]{university-logo}{images/tud_logo_cmyk.pdf}
@@ -158,21 +158,23 @@
 }
 
 
-\author{
-  Gajda, Michael \\
-  \texttt{michael.gajda@tu-dortmund.de}
-  \and \\
-  Schneider, Josef \\
-  \texttt{josef.schneider@tu-dortmund.de}
-}
+%\author{
+%  Gajda, Michael \\
+%  \texttt{michael.gajda@tu-dortmund.de}
+%  \and \\
+%  Schneider, Josef \\
+%  \texttt{josef.schneider@tu-dortmund.de}
+%}
+\author{FOSS-AG}
 \date{\today}
 
-\subject{FOSS-AG}
-\title{Das Linux Dateisystem aka. wie lebt mein Linux?}
-\subtitle{\textcolor{black}{F}ree and \textcolor{black}{O}pen \textcolor{black}{S}ource \textcolor{black}{S}oftware \textcolor{black}{- AG}}
+\subject{Linux Days Dortmund}
+\title{Das Linux Dateisystem}
+\subtitle{Linux Days Dortmund \textcolor{black}{2017}}
 %\institute[TU-Dortmund]{Fakultät für Informatik, Technische Universität Dortmund}
 %%\institute[TU-Dortmund]{Department of computer science, Technische Universität Dortmund}
 
+\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{Latex_Template/Background.png}}
 
 \begin{document}
 
@@ -186,21 +188,7 @@
 
 % Sidebarinhalt wieder mit TOC aber ohne author
 \setbeamertemplate{sidebar left}[sidebar theme]
-% Author im Sidebar verstecken
-\makeatletter
-  \setbeamertemplate{sidebar \beamer@sidebarside}%{sidebar theme}
-  {
-    \beamer@tempdim=\beamer@sidebarwidth%
-    \advance\beamer@tempdim by -6pt%
-    \insertverticalnavigation{\beamer@sidebarwidth}%
-    \vfill
-    \ifx\beamer@sidebarside\beamer@lefttext%
-    \else%
-      \usebeamercolor{normal text}%
-      \llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm}%
-      \vskip2pt%
-    \fi%
-}%
+
 \makeatother
 \include{inc/inc_fhs}
 
